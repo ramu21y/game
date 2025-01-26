@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us x Tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-slate-900">
+        <!-- Header -->
+        <header class="bg-red-600 text-white py-6 shadow-lg">
+            <div class="container">
+                <h1 class="title">
+                    <i data-lucide="ghost" class="ghost-icon"></i>
+                    Among Us x Tech
+                </h1>
+                <p class="subtitle">Master HTML while playing Among Us style!</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container py-8">
+            <!-- Level Info -->
+            <div class="level-card">
+                <div class="level-header">
+                    <div class="level-title-container">
+                        <h2 class="level-title">Level 1: A-Tags Challenge</h2>
+                        <div id="completionBadge" class="completion-badge hidden">
+                            <i data-lucide="check-circle-2"></i>
+                            <span>Level Completed!</span>
+                        </div>
+                    </div>
+                    <div class="level-controls">
+                        <div id="timer" class="timer hidden">
+                            <i data-lucide="clock"></i>
+                            <span id="timeDisplay">5:00</span>
+                        </div>
+                        <button id="startButton" class="start-button">
+                            <i data-lucide="play"></i>
+                            Start Challenge
+                        </button>
+                    </div>
+                </div>
+
+                <div id="gameResult" class="game-result hidden"></div>
+
+                <div id="gameContent" class="game-content hidden">
+                    <div class="preview-section">
+                        <div class="preview-header">
+                            <h3 class="section-title">Preview</h3>
+                            <button id="previewButton" class="preview-button">
+                                <i data-lucide="eye"></i>
+                                Show Preview
+                            </button>
+                        </div>
+
+                        <div id="previewContent" class="preview-content hidden"></div>
+
+                        <div class="editor-grid">
+                            <div class="editor-section">
+                                <h3 class="section-title">Source Code</h3>
+                                <textarea
+                                    id="codeEditor"
+                                    class="code-editor"
+                                    placeholder="Write your HTML code here..."
+                                ></textarea>
+                                <div id="errorMessage" class="error-message hidden"></div>
+                                <button id="submitButton" class="submit-button">
+                                    <i data-lucide="code-2"></i>
+                                    Submit Solution
+                                </button>
+                            </div>
+                            <div class="output-section">
+                                <h3 class="section-title">Output</h3>
+                                <div id="outputPreview" class="output-preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
